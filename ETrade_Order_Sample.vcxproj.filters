@@ -1,0 +1,885 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{e7e033af-a47d-4fc9-9b81-3cdf37be9be2}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{06ce1414-61b1-414d-b056-1447be766758}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{78dc7d69-6c10-4246-bcc8-d21c104ba711}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="packet">
+      <UniqueIdentifier>{541466f6-dd82-46aa-afe4-d43e58e4e645}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CSPAQ03700.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSPAT00700.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSPAT00800.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSPBQ00200.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DegreeList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ETrade_Order_Sample.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ETrade_Order_SampleDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GetList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ListofLog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MySQLCMD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="S_Login.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="S_Order_Debt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Searching_List.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Setup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="T0424.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="T1101.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="T1102.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="XLAutomation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="XLEzAutomation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CSPAT00700.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSPAT00800.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSPBQ00200.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DegreeList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ETrade_Order_Sample.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ETrade_Order_SampleDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GetList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IXingAPI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ListofLog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MySQLCMD.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="S_Login.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="S_Order_Debt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Searching_List.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Setup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="T1101.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="T1102.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="XLAutomation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="XLEzAutomation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\B7_.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\BM_.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\BMT.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\C01.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CACBQ21900.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CCEAQ01100.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CCEAQ06000.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CCEAQ10100.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CCEAQ50600.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CCEAT00100.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CCEAT00200.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CCEAT00300.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CCEBQ10500.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CDPCQ04700.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CEXAQ21100.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CEXAQ21200.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CEXAQ31100.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CEXAQ31200.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CEXAT11100.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CEXAT11200.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CEXAT11300.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CFOAQ00600.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CFOAQ10100.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CFOAQ50400.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CFOAT00100.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CFOAT00200.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CFOAT00300.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CFOBQ10500.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CFOBQ10800.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CFOEQ82600.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CFOFQ02400.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CM0.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CM1.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CM2.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CSPAQ02200.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CSPAQ02300.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CSPAQ03700.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CSPAT00600.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CSPAT00700.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CSPAT00800.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\CSPBQ00200.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\EC0.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\EH0.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\ESN.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\EU0.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\EU1.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\EU2.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\FC0.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\FH0.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\FOCCQ33600.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\FOCCQ33700.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\H01.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\H1_.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\H2_.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\h2_4ELW.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\h3_4ELW.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\HA_.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\HB_.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\I5_.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\IJ_.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\JC0.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\JH0.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\JIF.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\K1_.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\k1_4ELW.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\K3_.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\KH_.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\KM_.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\KS_.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\NC0.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\NH0.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\NWS.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\O01.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\o3117.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\OC0.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\OH0.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\OK_.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\OMG.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\PH_.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\PM_.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\S2_.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\s2_4ELW.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\S3_.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\s3_4ELW.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\S4_.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\s4_4ELW.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\SC0.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\SC1.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\SC2.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\SC3.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\SC4.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\SHC.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\SHD.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\SHI.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\SHO.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t0167.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t0424.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t0425.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t0431.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t0434.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t0441.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1101.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1102.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1104.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1105.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1301.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1302.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1305.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1308.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1310.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1404.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1405.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1411.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1422.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1427.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1442.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1444.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1449.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1452.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1471.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1485.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1486.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1488.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1511.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1516.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1531.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1532.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1533.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1537.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1601.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1602.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1603.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1615.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1617.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1621.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1631.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1632.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1633.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1636.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1637.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1640.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1662.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1664.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1665.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1701.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1702.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1717.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1752.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1764.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1771.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1809.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1825.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1826.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1901.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1902.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1903.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1904.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1921.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1926.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1927.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1941.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1950.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1951.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1954.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1955.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1956.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1958.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1959.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1960.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1961.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1964.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1966.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1971.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1972.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1973.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1974.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t1981.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t2101.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t2105.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t2106.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t2201.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t2203.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t2209.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t2210.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t2301.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t2405.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t2421.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t2541.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t2545.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t2801.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t2802.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t2804.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t2805.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t2813.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t2830.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t2831.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t2832.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t2833.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t2835.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t3102.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t3202.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t3320.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t3341.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t3401.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t3518.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t3521.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t4201.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t4203.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t8401.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t8402.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t8403.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t8404.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t8405.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t8406.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t8407.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t8408.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t8409.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t8413.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t8414.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t8415.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t8416.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t8424.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t8425.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t8426.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t8430.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t9905.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t9907.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t9942.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t9943.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t9944.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\t9945.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\TH_.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\TS_.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\YFC.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\YJ_.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\YJC.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\YK3.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\YOC.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\YS3.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet\Ys3_4ELW.h">
+      <Filter>packet</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\ETrade_Order_Sample.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ETrade_Order_Sample.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\ETrade_Order_Sample.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

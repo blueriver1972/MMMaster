@@ -1,0 +1,371 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 한국어 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 18, 1\r\n"
+    "#pragma code_page(949)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\ETrade_Order_Sample.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.kor\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\ETrade_Order_Sample.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG  0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ETrade_Order_Sample 정보"
+FONT 9, "굴림"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "ETrade_Order_Sample 버전 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2014",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "확인",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_DIALOG_SETUP DIALOGEX 0, 0, 345, 310
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Setup"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,101,279,50,14
+    PUSHBUTTON      "취소",IDCANCEL,189,279,50,14
+    EDITTEXT        IDC_EDIT1,93,25,75,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,226,25,75,12,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,93,41,75,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT4,226,42,75,12,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT5,93,59,75,12,ES_PASSWORD | ES_AUTOHSCROLL
+    RTEXT           "계좌",IDC_STATIC,34,26,50,11
+    RTEXT           "계좌 비밀번호",IDC_STATIC,174,28,48,11
+    RTEXT           "ID",IDC_STATIC,34,41,50,11
+    RTEXT           "Password",IDC_STATIC,174,43,48,11
+    RTEXT           "공인인증서",IDC_STATIC,34,60,50,11
+    RTEXT           "종목당 금액",IDC_STATIC,34,82,50,11
+    EDITTEXT        IDC_EDIT_JM_VAL,93,81,75,12,ES_AUTOHSCROLL
+    RTEXT           "매도비율",IDC_STATIC,172,81,48,11
+    EDITTEXT        IDC_EDIT_JM_RATE,223,81,29,12,ES_AUTOHSCROLL
+    RTEXT           "수익율",IDC_STATIC,34,103,50,11
+    EDITTEXT        IDC_EDIT_JM_DIFF,93,103,31,12,ES_AUTOHSCROLL
+    RTEXT           "매도단계",IDC_STATIC,171,103,48,11
+    EDITTEXT        IDC_EDIT_JM_LEVEL,223,103,27,12,ES_AUTOHSCROLL
+    LTEXT           "전체 매수금액의 %",IDC_STATIC,254,82,69,11
+    LTEXT           "수익율부터+3",IDC_STATIC,254,104,69,11
+    EDITTEXT        IDC_EDIT0,93,11,24,12,ES_AUTOHSCROLL
+    RTEXT           "인덱스",IDC_STATIC,33,11,50,11
+    RTEXT           "Max수익율",IDC_STATIC,34,123,50,11
+    EDITTEXT        IDC_EDIT_JM_DIFF2,93,123,31,12,ES_AUTOHSCROLL
+    RTEXT           "손절율",IDC_STATIC,34,143,50,11
+    EDITTEXT        IDC_EDIT_JM_DIFF3,93,143,31,12,ES_AUTOHSCROLL
+    RTEXT           "Max손절율",IDC_STATIC,34,163,50,11
+    EDITTEXT        IDC_EDIT_JM_DIFF4,93,163,31,12,ES_AUTOHSCROLL
+END
+
+IDD_ETRADE_ORDER_SAMPLE_DIALOG1 DIALOGEX 0, 0, 463, 679
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "MMMaster"
+FONT 9, "굴림", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Stop",IDOK,124,2,39,14
+    PUSHBUTTON      "Start",IDC_BUTTON_START,79,2,39,14
+    LTEXT           "Info",IDC_STATIC_INFO,71,18,125,10
+    PUSHBUTTON      "Connect",IDC_BUTTON_START2,36,2,39,14
+    LTEXT           "Static",IDC_STATIC_LOGIN,9,18,56,10
+    EDITTEXT        IDC_EDIT7,11,2,23,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_LIST2,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,11,28,438,113
+    LISTBOX         IDC_LIST4,11,371,438,73,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_JM_1,15,331,41,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CODE_1,61,331,26,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PR_1,93,331,35,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_NUM_1,133,331,34,14,ES_CENTER | ES_AUTOHSCROLL
+    CONTROL         "지정가",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | BS_LEFTTEXT | WS_GROUP,170,333,29,10
+    CONTROL         "시장가",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON | BS_LEFTTEXT | WS_TABSTOP,204,333,29,10
+    PUSHBUTTON      "매수",IDC_BUTTON_MS_1,244,331,24,16,0,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "매도",IDC_BUTTON_MD_1,276,331,24,16,0,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "취소",IDC_BUTTON_CN_1,305,331,24,16,0,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "정정",IDC_BUTTON_MI_1,336,331,24,16,0,WS_EX_DLGMODALFRAME
+    EDITTEXT        IDC_EDIT_JM_2,15,349,41,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CODE_2,61,349,26,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PR_2,93,349,35,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_NUM_2,133,349,34,14,ES_CENTER | ES_AUTOHSCROLL
+    CONTROL         "지정가",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON | BS_LEFTTEXT | WS_GROUP,171,351,29,10
+    CONTROL         "시장가",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON | BS_LEFTTEXT | WS_TABSTOP,204,351,29,10
+    LTEXT           "종목",IDC_STATIC,26,319,23,10
+    LTEXT           "코드",IDC_STATIC,66,320,18,9
+    LTEXT           "가격",IDC_STATIC,100,319,18,9
+    LTEXT           "수량",IDC_STATIC,142,319,18,9
+    PUSHBUTTON      "매수",IDC_BUTTON_MS_2,244,349,24,16,0,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "매도",IDC_BUTTON_MD_2,276,349,24,16,0,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "취소",IDC_BUTTON_CN_2,305,349,24,16,0,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "정정",IDC_BUTTON_MI_2,336,349,24,16,0,WS_EX_DLGMODALFRAME
+    GROUPBOX        "주문",IDC_STATIC,10,305,365,64
+    CONTROL         "Auto Mode",IDC_CHECK_AUTO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,167,4,47,11
+    RTEXT           "추정순자산",IDC_STATIC,13,146,36,8
+    EDITTEXT        IDC_EDIT1,50,144,50,12,ES_CENTER | ES_AUTOHSCROLL
+    RTEXT           "실현손익",IDC_STATIC,175,147,28,8
+    EDITTEXT        IDC_EDIT2,206,145,50,12,ES_CENTER | ES_AUTOHSCROLL
+    RTEXT           "매입금액",IDC_STATIC,321,147,28,8
+    EDITTEXT        IDC_EDIT4,352,145,50,12,ES_CENTER | ES_AUTOHSCROLL
+    RTEXT           "D2예수금액",IDC_STATIC,312,161,37,8
+    EDITTEXT        IDC_EDIT5,352,159,50,12,ES_CENTER | ES_AUTOHSCROLL
+    RTEXT           "평가금액",IDC_STATIC,18,161,28,8
+    EDITTEXT        IDC_EDIT9,50,159,50,12,ES_CENTER | ES_AUTOHSCROLL
+    RTEXT           "평가손익",IDC_STATIC,175,161,28,8
+    EDITTEXT        IDC_EDIT10,206,159,50,12,ES_CENTER | ES_AUTOHSCROLL
+    CONTROL         "",IDC_LIST5,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,11,174,438,129
+    PUSHBUTTON      "Setup",IDC_BUTTON1,260,2,29,13
+    EDITTEXT        IDC_EDIT11,104,144,50,12,ES_CENTER | ES_AUTOHSCROLL
+    LTEXT           "Static",IDC_STATIC_MMINFO,10,581,415,14
+    LTEXT           "Static",IDC_STATIC_JISU,10,622,415,20
+    LTEXT           "Static",IDC_STATIC_MMINFO2,10,603,415,15
+    LTEXT           "Static",IDC_STATIC_JISU2,10,647,415,20
+    PUSHBUTTON      "오늘",IDC_BUTTON2,428,577,25,12
+    PUSHBUTTON      "오늘",IDC_BUTTON3,428,602,25,12
+    PUSHBUTTON      "오늘",IDC_BUTTON4,428,626,25,12
+    PUSHBUTTON      "오늘",IDC_BUTTON5,428,650,25,12
+    PUSHBUTTON      "일자",IDC_BUTTON6,428,589,25,12
+    PUSHBUTTON      "일자",IDC_BUTTON7,428,613,25,12
+    PUSHBUTTON      "일자",IDC_BUTTON8,428,637,25,12
+    PUSHBUTTON      "일자",IDC_BUTTON9,428,661,25,12
+    PUSHBUTTON      "Time setup",IDC_BUTTON10,405,3,44,12,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT12,295,2,30,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT13,327,2,30,12,ES_AUTOHSCROLL
+    LTEXT           "Info",IDC_STATIC_INFO_RATE,217,17,218,10
+    EDITTEXT        IDC_EDIT15,257,146,31,12,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT16,216,2,18,14,ES_AUTOHSCROLL
+    LTEXT           "index",IDC_STATIC,235,5,19,12
+    LISTBOX         IDC_LIST6,11,448,438,37,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST7,10,488,438,91,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_MAX,365,3,34,14,ES_AUTOHSCROLL
+    LTEXT           "Static",IDC_STATIC_NUM,409,146,37,14
+    PUSHBUTTON      "검색",IDC_BUTTON11,383,339,63,16
+    EDITTEXT        IDC_EDIT_PRICE,383,305,59,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_RATE,383,322,41,13,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_LIST DIALOGEX 0, 0, 762, 357
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "List of log"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,318,336,50,14
+    PUSHBUTTON      "취소",IDCANCEL,388,336,50,14
+    CONTROL         "",IDC_LIST2,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,9,14,744,315
+END
+
+IDD_DIALOG_SE DIALOGEX 0, 0, 370, 275
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Searching List"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,100,254,50,14
+    PUSHBUTTON      "취소",IDCANCEL,188,254,50,14
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,15,14,340,229
+END
+
+IDD_DIALOG_DEGREE_LIST DIALOGEX 0, 0, 316, 354
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Degree List"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,87,333,50,14
+    PUSHBUTTON      "취소",IDCANCEL,155,333,50,14
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,302,314
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041204b0"
+        BEGIN
+            VALUE "FileDescription", "MM_MA"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "MMMaster"
+            VALUE "LegalCopyright", "Copyright (C) 2014"
+            VALUE "OriginalFilename", "MMMaster.EXE"
+            VALUE "ProductName", "MMMaster 응용 프로그램"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x412, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_DIALOG_SETUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 338
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 303
+    END
+
+    IDD_ETRADE_ORDER_SAMPLE_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 458
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 673
+    END
+
+    IDD_DIALOG_LIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 755
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 350
+    END
+
+    IDD_DIALOG_SE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 363
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 268
+    END
+
+    IDD_DIALOG_DEGREE_LIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 347
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "ETrade_ETF 정보(&A)..."
+    IDP_SOCKETS_INIT_FAILED "Windows 소켓 초기화에 실패하였습니다."
+END
+
+#endif    // 한국어 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE 18, 1
+#pragma code_page(949)
+#endif //_WIN32
+#include "res\ETrade_Order_Sample.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.kor\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

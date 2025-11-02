@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectName>MMMaster</ProjectName>
+    <ProjectGuid>{9923FA8B-F5BD-4D0D-A200-3210A476264A}</ProjectGuid>
+    <RootNamespace>ETrade_Order_Sample</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>17.0.33205.214</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/ETrade_Order_Sample.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Debug/ETrade_Order_Sample.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>D:\swtool\MySQL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+    </ResourceCompile>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Debug/ETrade_Order_Sample.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>libmysql.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\swtool\MySQL\lib\opt;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug/ETrade_Order_Sample.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TypeLibraryName>.\Debug/ETrade_Order_Sample.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Debug/ETrade_Order_Sample.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>D:\swtool\MySQL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+    </ResourceCompile>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Debug/ETrade_Order_Sample.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <AdditionalLibraryDirectories>D:\swtool\MySQL\lib\opt;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libmysql.lib</AdditionalDependencies>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug/ETrade_Order_Sample.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/ETrade_Order_Sample.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Release/ETrade_Order_Sample.pch</PrecompiledHeaderOutputFile>
+      <ExpandAttributedSource>false</ExpandAttributedSource>
+      <AssemblerOutput />
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <GenerateXMLDocumentationFiles>true</GenerateXMLDocumentationFiles>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalIncludeDirectories>D:\swtool\MySQL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+    </ResourceCompile>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>.\Release/ETrade_Order_Sample.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>libmysql.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\swtool\MySQL\lib\opt;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release/ETrade_Order_Sample.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TypeLibraryName>.\Release/ETrade_Order_Sample.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Release/ETrade_Order_Sample.pch</PrecompiledHeaderOutputFile>
+      <ExpandAttributedSource>false</ExpandAttributedSource>
+      <AssemblerOutput>
+      </AssemblerOutput>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <GenerateXMLDocumentationFiles>true</GenerateXMLDocumentationFiles>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalIncludeDirectories>D:\swtool\MySQL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+    </ResourceCompile>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>.\Release/ETrade_Order_Sample.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <AdditionalLibraryDirectories>D:\swtool\MySQL\lib\opt;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libmysql.lib</AdditionalDependencies>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release/ETrade_Order_Sample.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CSPAQ03700.cpp" />
+    <ClCompile Include="CSPAT00700.cpp" />
+    <ClCompile Include="CSPAT00800.cpp" />
+    <ClCompile Include="CSPBQ00200.cpp" />
+    <ClCompile Include="DegreeList.cpp" />
+    <ClCompile Include="ETrade_Order_Sample.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ETrade_Order_SampleDlg.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release/ETrade_Order_Sample.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\Release/ETrade_Order_Sample.pch</PrecompiledHeaderOutputFile>
+      <ExpandAttributedSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExpandAttributedSource>
+      <ExpandAttributedSource Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExpandAttributedSource>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release/</AssemblerListingLocation>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\Release/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release/</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release/</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\Release/</ProgramDataBaseFileName>
+    </ClCompile>
+    <ClCompile Include="GetList.cpp" />
+    <ClCompile Include="ListofLog.cpp" />
+    <ClCompile Include="MySQLCMD.cpp" />
+    <ClCompile Include="Searching_List.cpp" />
+    <ClCompile Include="Setup.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="S_Login.cpp" />
+    <ClCompile Include="S_Order_Debt.cpp" />
+    <ClCompile Include="T0424.cpp" />
+    <ClCompile Include="T1101.cpp" />
+    <ClCompile Include="T1102.cpp" />
+    <ClCompile Include="XLAutomation.cpp" />
+    <ClCompile Include="XLEzAutomation.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CSPAT00700.h" />
+    <ClInclude Include="CSPAT00800.h" />
+    <ClInclude Include="CSPBQ00200.h" />
+    <ClInclude Include="DegreeList.h" />
+    <ClInclude Include="ETrade_Order_Sample.h" />
+    <ClInclude Include="ETrade_Order_SampleDlg.h" />
+    <ClInclude Include="GetList.h" />
+    <ClInclude Include="IXingAPI.h" />
+    <ClInclude Include="ListofLog.h" />
+    <ClInclude Include="MySQLCMD.h" />
+    <ClInclude Include="packet\B7_.h" />
+    <ClInclude Include="packet\BMT.h" />
+    <ClInclude Include="packet\BM_.h" />
+    <ClInclude Include="packet\C01.h" />
+    <ClInclude Include="packet\CACBQ21900.h" />
+    <ClInclude Include="packet\CCEAQ01100.h" />
+    <ClInclude Include="packet\CCEAQ06000.h" />
+    <ClInclude Include="packet\CCEAQ10100.h" />
+    <ClInclude Include="packet\CCEAQ50600.h" />
+    <ClInclude Include="packet\CCEAT00100.h" />
+    <ClInclude Include="packet\CCEAT00200.h" />
+    <ClInclude Include="packet\CCEAT00300.h" />
+    <ClInclude Include="packet\CCEBQ10500.h" />
+    <ClInclude Include="packet\CDPCQ04700.h" />
+    <ClInclude Include="packet\CEXAQ21100.h" />
+    <ClInclude Include="packet\CEXAQ21200.h" />
+    <ClInclude Include="packet\CEXAQ31100.h" />
+    <ClInclude Include="packet\CEXAQ31200.h" />
+    <ClInclude Include="packet\CEXAT11100.h" />
+    <ClInclude Include="packet\CEXAT11200.h" />
+    <ClInclude Include="packet\CEXAT11300.h" />
+    <ClInclude Include="packet\CFOAQ00600.h" />
+    <ClInclude Include="packet\CFOAQ10100.h" />
+    <ClInclude Include="packet\CFOAQ50400.h" />
+    <ClInclude Include="packet\CFOAT00100.h" />
+    <ClInclude Include="packet\CFOAT00200.h" />
+    <ClInclude Include="packet\CFOAT00300.h" />
+    <ClInclude Include="packet\CFOBQ10500.h" />
+    <ClInclude Include="packet\CFOBQ10800.h" />
+    <ClInclude Include="packet\CFOEQ82600.h" />
+    <ClInclude Include="packet\CFOFQ02400.h" />
+    <ClInclude Include="packet\CM0.h" />
+    <ClInclude Include="packet\CM1.h" />
+    <ClInclude Include="packet\CM2.h" />
+    <ClInclude Include="packet\CSPAQ02200.h" />
+    <ClInclude Include="packet\CSPAQ02300.h" />
+    <ClInclude Include="packet\CSPAQ03700.h" />
+    <ClInclude Include="packet\CSPAT00600.h" />
+    <ClInclude Include="packet\CSPAT00700.h" />
+    <ClInclude Include="packet\CSPAT00800.h" />
+    <ClInclude Include="packet\CSPBQ00200.h" />
+    <ClInclude Include="packet\EC0.h" />
+    <ClInclude Include="packet\EH0.h" />
+    <ClInclude Include="packet\ESN.h" />
+    <ClInclude Include="packet\EU0.h" />
+    <ClInclude Include="packet\EU1.h" />
+    <ClInclude Include="packet\EU2.h" />
+    <ClInclude Include="packet\FC0.h" />
+    <ClInclude Include="packet\FH0.h" />
+    <ClInclude Include="packet\FOCCQ33600.h" />
+    <ClInclude Include="packet\FOCCQ33700.h" />
+    <ClInclude Include="packet\H01.h" />
+    <ClInclude Include="packet\H1_.h" />
+    <ClInclude Include="packet\H2_.h" />
+    <ClInclude Include="packet\h2_4ELW.h" />
+    <ClInclude Include="packet\h3_4ELW.h" />
+    <ClInclude Include="packet\HA_.h" />
+    <ClInclude Include="packet\HB_.h" />
+    <ClInclude Include="packet\I5_.h" />
+    <ClInclude Include="packet\IJ_.h" />
+    <ClInclude Include="packet\JC0.h" />
+    <ClInclude Include="packet\JH0.h" />
+    <ClInclude Include="packet\JIF.h" />
+    <ClInclude Include="packet\K1_.h" />
+    <ClInclude Include="packet\k1_4ELW.h" />
+    <ClInclude Include="packet\K3_.h" />
+    <ClInclude Include="packet\KH_.h" />
+    <ClInclude Include="packet\KM_.h" />
+    <ClInclude Include="packet\KS_.h" />
+    <ClInclude Include="packet\NC0.h" />
+    <ClInclude Include="packet\NH0.h" />
+    <ClInclude Include="packet\NWS.h" />
+    <ClInclude Include="packet\O01.h" />
+    <ClInclude Include="packet\o3117.h" />
+    <ClInclude Include="packet\OC0.h" />
+    <ClInclude Include="packet\OH0.h" />
+    <ClInclude Include="packet\OK_.h" />
+    <ClInclude Include="packet\OMG.h" />
+    <ClInclude Include="packet\PH_.h" />
+    <ClInclude Include="packet\PM_.h" />
+    <ClInclude Include="packet\S2_.h" />
+    <ClInclude Include="packet\s2_4ELW.h" />
+    <ClInclude Include="packet\S3_.h" />
+    <ClInclude Include="packet\s3_4ELW.h" />
+    <ClInclude Include="packet\S4_.h" />
+    <ClInclude Include="packet\s4_4ELW.h" />
+    <ClInclude Include="packet\SC0.h" />
+    <ClInclude Include="packet\SC1.h" />
+    <ClInclude Include="packet\SC2.h" />
+    <ClInclude Include="packet\SC3.h" />
+    <ClInclude Include="packet\SC4.h" />
+    <ClInclude Include="packet\SHC.h" />
+    <ClInclude Include="packet\SHD.h" />
+    <ClInclude Include="packet\SHI.h" />
+    <ClInclude Include="packet\SHO.h" />
+    <ClInclude Include="packet\t0167.h" />
+    <ClInclude Include="packet\t0424.h" />
+    <ClInclude Include="packet\t0425.h" />
+    <ClInclude Include="packet\t0431.h" />
+    <ClInclude Include="packet\t0434.h" />
+    <ClInclude Include="packet\t0441.h" />
+    <ClInclude Include="packet\t1101.h" />
+    <ClInclude Include="packet\t1102.h" />
+    <ClInclude Include="packet\t1104.h" />
+    <ClInclude Include="packet\t1105.h" />
+    <ClInclude Include="packet\t1301.h" />
+    <ClInclude Include="packet\t1302.h" />
+    <ClInclude Include="packet\t1305.h" />
+    <ClInclude Include="packet\t1308.h" />
+    <ClInclude Include="packet\t1310.h" />
+    <ClInclude Include="packet\t1404.h" />
+    <ClInclude Include="packet\t1405.h" />
+    <ClInclude Include="packet\t1411.h" />
+    <ClInclude Include="packet\t1422.h" />
+    <ClInclude Include="packet\t1427.h" />
+    <ClInclude Include="packet\t1442.h" />
+    <ClInclude Include="packet\t1444.h" />
+    <ClInclude Include="packet\t1449.h" />
+    <ClInclude Include="packet\t1452.h" />
+    <ClInclude Include="packet\t1471.h" />
+    <ClInclude Include="packet\t1485.h" />
+    <ClInclude Include="packet\t1486.h" />
+    <ClInclude Include="packet\t1488.h" />
+    <ClInclude Include="packet\t1511.h" />
+    <ClInclude Include="packet\t1516.h" />
+    <ClInclude Include="packet\t1531.h" />
+    <ClInclude Include="packet\t1532.h" />
+    <ClInclude Include="packet\t1533.h" />
+    <ClInclude Include="packet\t1537.h" />
+    <ClInclude Include="packet\t1601.h" />
+    <ClInclude Include="packet\t1602.h" />
+    <ClInclude Include="packet\t1603.h" />
+    <ClInclude Include="packet\t1615.h" />
+    <ClInclude Include="packet\t1617.h" />
+    <ClInclude Include="packet\t1621.h" />
+    <ClInclude Include="packet\t1631.h" />
+    <ClInclude Include="packet\t1632.h" />
+    <ClInclude Include="packet\t1633.h" />
+    <ClInclude Include="packet\t1636.h" />
+    <ClInclude Include="packet\t1637.h" />
+    <ClInclude Include="packet\t1640.h" />
+    <ClInclude Include="packet\t1662.h" />
+    <ClInclude Include="packet\t1664.h" />
+    <ClInclude Include="packet\t1665.h" />
+    <ClInclude Include="packet\t1701.h" />
+    <ClInclude Include="packet\t1702.h" />
+    <ClInclude Include="packet\t1717.h" />
+    <ClInclude Include="packet\t1752.h" />
+    <ClInclude Include="packet\t1764.h" />
+    <ClInclude Include="packet\t1771.h" />
+    <ClInclude Include="packet\t1809.h" />
+    <ClInclude Include="packet\t1825.h" />
+    <ClInclude Include="packet\t1826.h" />
+    <ClInclude Include="packet\t1901.h" />
+    <ClInclude Include="packet\t1902.h" />
+    <ClInclude Include="packet\t1903.h" />
+    <ClInclude Include="packet\t1904.h" />
+    <ClInclude Include="packet\t1921.h" />
+    <ClInclude Include="packet\t1926.h" />
+    <ClInclude Include="packet\t1927.h" />
+    <ClInclude Include="packet\t1941.h" />
+    <ClInclude Include="packet\t1950.h" />
+    <ClInclude Include="packet\t1951.h" />
+    <ClInclude Include="packet\t1954.h" />
+    <ClInclude Include="packet\t1955.h" />
+    <ClInclude Include="packet\t1956.h" />
+    <ClInclude Include="packet\t1958.h" />
+    <ClInclude Include="packet\t1959.h" />
+    <ClInclude Include="packet\t1960.h" />
+    <ClInclude Include="packet\t1961.h" />
+    <ClInclude Include="packet\t1964.h" />
+    <ClInclude Include="packet\t1966.h" />
+    <ClInclude Include="packet\t1971.h" />
+    <ClInclude Include="packet\t1972.h" />
+    <ClInclude Include="packet\t1973.h" />
+    <ClInclude Include="packet\t1974.h" />
+    <ClInclude Include="packet\t1981.h" />
+    <ClInclude Include="packet\t2101.h" />
+    <ClInclude Include="packet\t2105.h" />
+    <ClInclude Include="packet\t2106.h" />
+    <ClInclude Include="packet\t2201.h" />
+    <ClInclude Include="packet\t2203.h" />
+    <ClInclude Include="packet\t2209.h" />
+    <ClInclude Include="packet\t2210.h" />
+    <ClInclude Include="packet\t2301.h" />
+    <ClInclude Include="packet\t2405.h" />
+    <ClInclude Include="packet\t2421.h" />
+    <ClInclude Include="packet\t2541.h" />
+    <ClInclude Include="packet\t2545.h" />
+    <ClInclude Include="packet\t2801.h" />
+    <ClInclude Include="packet\t2802.h" />
+    <ClInclude Include="packet\t2804.h" />
+    <ClInclude Include="packet\t2805.h" />
+    <ClInclude Include="packet\t2813.h" />
+    <ClInclude Include="packet\t2830.h" />
+    <ClInclude Include="packet\t2831.h" />
+    <ClInclude Include="packet\t2832.h" />
+    <ClInclude Include="packet\t2833.h" />
+    <ClInclude Include="packet\t2835.h" />
+    <ClInclude Include="packet\t3102.h" />
+    <ClInclude Include="packet\t3202.h" />
+    <ClInclude Include="packet\t3320.h" />
+    <ClInclude Include="packet\t3341.h" />
+    <ClInclude Include="packet\t3401.h" />
+    <ClInclude Include="packet\t3518.h" />
+    <ClInclude Include="packet\t3521.h" />
+    <ClInclude Include="packet\t4201.h" />
+    <ClInclude Include="packet\t4203.h" />
+    <ClInclude Include="packet\t8401.h" />
+    <ClInclude Include="packet\t8402.h" />
+    <ClInclude Include="packet\t8403.h" />
+    <ClInclude Include="packet\t8404.h" />
+    <ClInclude Include="packet\t8405.h" />
+    <ClInclude Include="packet\t8406.h" />
+    <ClInclude Include="packet\t8407.h" />
+    <ClInclude Include="packet\t8408.h" />
+    <ClInclude Include="packet\t8409.h" />
+    <ClInclude Include="packet\t8413.h" />
+    <ClInclude Include="packet\t8414.h" />
+    <ClInclude Include="packet\t8415.h" />
+    <ClInclude Include="packet\t8416.h" />
+    <ClInclude Include="packet\t8424.h" />
+    <ClInclude Include="packet\t8425.h" />
+    <ClInclude Include="packet\t8426.h" />
+    <ClInclude Include="packet\t8430.h" />
+    <ClInclude Include="packet\t9905.h" />
+    <ClInclude Include="packet\t9907.h" />
+    <ClInclude Include="packet\t9942.h" />
+    <ClInclude Include="packet\t9943.h" />
+    <ClInclude Include="packet\t9944.h" />
+    <ClInclude Include="packet\t9945.h" />
+    <ClInclude Include="packet\TH_.h" />
+    <ClInclude Include="packet\TS_.h" />
+    <ClInclude Include="packet\YFC.h" />
+    <ClInclude Include="packet\YJC.h" />
+    <ClInclude Include="packet\YJ_.h" />
+    <ClInclude Include="packet\YK3.h" />
+    <ClInclude Include="packet\YOC.h" />
+    <ClInclude Include="packet\YS3.h" />
+    <ClInclude Include="packet\Ys3_4ELW.h" />
+    <ClInclude Include="QList.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="Searching_List.h" />
+    <ClInclude Include="Setup.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="S_Login.h" />
+    <ClInclude Include="S_Order_Debt.h" />
+    <ClInclude Include="T1101.h" />
+    <ClInclude Include="T1102.h" />
+    <ClInclude Include="XLAutomation.h" />
+    <ClInclude Include="XLEzAutomation.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\ETrade_Order_Sample.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ETrade_Order_Sample.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\ETrade_Order_Sample.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="ETrade_Order_Sample.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

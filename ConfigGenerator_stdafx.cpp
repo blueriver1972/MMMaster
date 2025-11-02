@@ -1,0 +1,5 @@
+// ConfigGenerator_stdafx.cpp : source file that includes just the standard includes
+//
+
+#include "ConfigGenerator_stdafx.h"
+

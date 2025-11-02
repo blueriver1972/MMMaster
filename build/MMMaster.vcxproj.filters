@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\stock\ebest\20180327\MMMaster\build\CMakeFiles\MMMaster.dir\cmake_pch.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\stock\ebest\20180327\MMMaster\ETrade_Order_Sample.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\stock\ebest\20180327\MMMaster\ETrade_Order_SampleDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\stock\ebest\20180327\MMMaster\StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\stock\ebest\20180327\MMMaster\CSPAQ03700.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\stock\ebest\20180327\MMMaster\CSPAT00700.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\stock\ebest\20180327\MMMaster\CSPAT00800.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\stock\ebest\20180327\MMMaster\CSPBQ00200.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\stock\ebest\20180327\MMMaster\T0424.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\stock\ebest\20180327\MMMaster\T1101.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\stock\ebest\20180327\MMMaster\T1102.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\stock\ebest\20180327\MMMaster\S_Login.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\stock\ebest\20180327\MMMaster\S_Order_Debt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\stock\ebest\20180327\MMMaster\MySQLCMD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\stock\ebest\20180327\MMMaster\GetList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\stock\ebest\20180327\MMMaster\ListofLog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\stock\ebest\20180327\MMMaster\Searching_List.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\stock\ebest\20180327\MMMaster\Setup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\stock\ebest\20180327\MMMaster\DegreeList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\stock\ebest\20180327\MMMaster\XLAutomation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\stock\ebest\20180327\MMMaster\XLEzAutomation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\stock\ebest\20180327\MMMaster\ETrade_Order_Sample.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\stock\ebest\20180327\MMMaster\ETrade_Order_SampleDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\stock\ebest\20180327\MMMaster\StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\stock\ebest\20180327\MMMaster\resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\stock\ebest\20180327\MMMaster\CSPAQ03700.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\stock\ebest\20180327\MMMaster\CSPAT00700.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\stock\ebest\20180327\MMMaster\CSPAT00800.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\stock\ebest\20180327\MMMaster\CSPBQ00200.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\stock\ebest\20180327\MMMaster\T0424.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\stock\ebest\20180327\MMMaster\T1101.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\stock\ebest\20180327\MMMaster\T1102.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\stock\ebest\20180327\MMMaster\S_Login.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\stock\ebest\20180327\MMMaster\S_Order_Debt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\stock\ebest\20180327\MMMaster\MySQLCMD.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\stock\ebest\20180327\MMMaster\GetList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\stock\ebest\20180327\MMMaster\ListofLog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\stock\ebest\20180327\MMMaster\Searching_List.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\stock\ebest\20180327\MMMaster\Setup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\stock\ebest\20180327\MMMaster\DegreeList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\stock\ebest\20180327\MMMaster\IXingAPI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\stock\ebest\20180327\MMMaster\QList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\stock\ebest\20180327\MMMaster\XLAutomation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\stock\ebest\20180327\MMMaster\XLEzAutomation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\stock\ebest\20180327\MMMaster\build\CMakeFiles\MMMaster.dir\Debug\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\stock\ebest\20180327\MMMaster\build\CMakeFiles\MMMaster.dir\Release\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\stock\ebest\20180327\MMMaster\build\CMakeFiles\MMMaster.dir\MinSizeRel\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\stock\ebest\20180327\MMMaster\build\CMakeFiles\MMMaster.dir\RelWithDebInfo\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\stock\ebest\20180327\MMMaster\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\stock\ebest\20180327\MMMaster\res\ETrade_Order_Sample.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="D:\stock\ebest\20180327\MMMaster\ETrade_Order_Sample.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{EAB5B5AC-BE6F-35AB-9F7A-2D8BE904F8AA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompile Header File">
+      <UniqueIdentifier>{5346149A-38C9-38E0-A864-8EB75EDA49AC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3EE051A3-126A-3906-9DEA-1ED2649A6174}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
