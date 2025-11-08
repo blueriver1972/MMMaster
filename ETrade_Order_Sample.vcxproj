@@ -73,6 +73,11 @@
   <PropertyGroup>
     <_ProjectFileVersion>17.0.33205.214</_ProjectFileVersion>
   </PropertyGroup>
+  <!-- UpgradeFromVC60.props가 설정한 기본 출력 디렉토리를 오버라이드 -->
+  <PropertyGroup>
+    <OutDir Condition="'$(OutDir)'=='' OR '$(OutDir)'=='$(Configuration)\' OR '$(OutDir)'=='.\$(Configuration)\'">$(SolutionDir)MMMaster\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(IntDir)'=='' OR '$(IntDir)'=='$(Configuration)\' OR '$(IntDir)'=='.\$(Configuration)\'">$(SolutionDir)MMMaster\$(Configuration)\</IntDir>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(SolutionDir)MMMaster\Debug\</OutDir>
     <IntDir>$(SolutionDir)MMMaster\Debug\</IntDir>
@@ -99,7 +104,7 @@
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>.\Debug/ETrade_Order_Sample.tlb</TypeLibraryName>
+      <TypeLibraryName>$(IntDir)ETrade_Order_Sample.tlb</TypeLibraryName>
       <HeaderFileName />
     </Midl>
     <ClCompile>
@@ -110,10 +115,10 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>.\Debug/ETrade_Order_Sample.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
-      <ObjectFileName>.\Debug/</ObjectFileName>
-      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>$(IntDir)ETrade_Order_Sample.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
@@ -131,7 +136,7 @@
     <Link>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\Debug/ETrade_Order_Sample.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(IntDir)ETrade_Order_Sample.pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention />
@@ -142,36 +147,26 @@
     <PostBuildEvent>
       <Message>필수 DLL 및 설정 파일을 출력 디렉토리로 복사 중...</Message>
       <Command>if not exist "$(OutDir)" mkdir "$(OutDir)"
-if exist "$(SolutionDir)Release\xingAPI.dll" copy /Y "$(SolutionDir)Release\xingAPI.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\xingAPI.ini" copy /Y "$(SolutionDir)Release\xingAPI.ini" "$(OutDir)"
-if exist "$(SolutionDir)Release\XA_Common.dll" copy /Y "$(SolutionDir)Release\XA_Common.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\XA_DataSet.dll" copy /Y "$(SolutionDir)Release\XA_DataSet.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\XA_Session.dll" copy /Y "$(SolutionDir)Release\XA_Session.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\XecureS.dll" copy /Y "$(SolutionDir)Release\XecureS.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\xingAceRDSender.dll" copy /Y "$(SolutionDir)Release\xingAceRDSender.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\inicore_v2.4.3.1.dll" copy /Y "$(SolutionDir)Release\inicore_v2.4.3.1.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\inicrypto_v5.2.0.1.dll" copy /Y "$(SolutionDir)Release\inicrypto_v5.2.0.1.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\inipki_v5.2.7.1.dll" copy /Y "$(SolutionDir)Release\inipki_v5.2.7.1.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\inisafenet_v7.2.dll" copy /Y "$(SolutionDir)Release\inisafenet_v7.2.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\libmysql.dll" copy /Y "$(SolutionDir)Release\libmysql.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\Login.ini" copy /Y "$(SolutionDir)Release\Login.ini" "$(OutDir)"
-if exist "$(SolutionDir)Release\Sys" xcopy /E /I /Y "$(SolutionDir)Release\Sys" "$(OutDir)Sys"
-if exist "$(SolutionDir)xingAPI.dll" copy /Y "$(SolutionDir)xingAPI.dll" "$(OutDir)"
-if exist "$(SolutionDir)xingAPI.ini" copy /Y "$(SolutionDir)xingAPI.ini" "$(OutDir)"
-if exist "$(SolutionDir)XA_Common.dll" copy /Y "$(SolutionDir)XA_Common.dll" "$(OutDir)"
-if exist "$(SolutionDir)XA_DataSet.dll" copy /Y "$(SolutionDir)XA_DataSet.dll" "$(OutDir)"
-if exist "$(SolutionDir)XA_Session.dll" copy /Y "$(SolutionDir)XA_Session.dll" "$(OutDir)"
-if exist "$(SolutionDir)XecureS.dll" copy /Y "$(SolutionDir)XecureS.dll" "$(OutDir)"
-if exist "$(SolutionDir)xingAceRDSender.dll" copy /Y "$(SolutionDir)xingAceRDSender.dll" "$(OutDir)"
-if exist "$(SolutionDir)inicore_v2.4.3.1.dll" copy /Y "$(SolutionDir)inicore_v2.4.3.1.dll" "$(OutDir)"
-if exist "$(SolutionDir)inicrypto_v5.2.0.1.dll" copy /Y "$(SolutionDir)inicrypto_v5.2.0.1.dll" "$(OutDir)"
-if exist "$(SolutionDir)inipki_v5.2.7.1.dll" copy /Y "$(SolutionDir)inipki_v5.2.7.1.dll" "$(OutDir)"
-if exist "$(SolutionDir)inisafenet_v7.2.dll" copy /Y "$(SolutionDir)inisafenet_v7.2.dll" "$(OutDir)"
-if exist "$(SolutionDir)Login.ini" copy /Y "$(SolutionDir)Login.ini" "$(OutDir)"</Command>
+if not "$(Configuration)"=="Release" (
+if exist "$(SolutionDir)MMMaster\Release\xingAPI.dll" copy /Y "$(SolutionDir)MMMaster\Release\xingAPI.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\xingAPI.ini" copy /Y "$(SolutionDir)MMMaster\Release\xingAPI.ini" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\XA_Common.dll" copy /Y "$(SolutionDir)MMMaster\Release\XA_Common.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\XA_DataSet.dll" copy /Y "$(SolutionDir)MMMaster\Release\XA_DataSet.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\XA_Session.dll" copy /Y "$(SolutionDir)MMMaster\Release\XA_Session.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\XecureS.dll" copy /Y "$(SolutionDir)MMMaster\Release\XecureS.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\xingAceRDSender.dll" copy /Y "$(SolutionDir)MMMaster\Release\xingAceRDSender.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\inicore_v2.4.3.1.dll" copy /Y "$(SolutionDir)MMMaster\Release\inicore_v2.4.3.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\inicrypto_v5.2.0.1.dll" copy /Y "$(SolutionDir)MMMaster\Release\inicrypto_v5.2.0.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\inipki_v5.2.7.1.dll" copy /Y "$(SolutionDir)MMMaster\Release\inipki_v5.2.7.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\inisafenet_v7.2.dll" copy /Y "$(SolutionDir)MMMaster\Release\inisafenet_v7.2.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\libmysql.dll" copy /Y "$(SolutionDir)MMMaster\Release\libmysql.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\Login.ini" copy /Y "$(SolutionDir)MMMaster\Release\Login.ini" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\Sys" if not exist "$(OutDir)Sys" mkdir "$(OutDir)Sys" &amp; xcopy /E /I /Y "$(SolutionDir)MMMaster\Release\Sys" "$(OutDir)Sys"
+)</Command>
     </PostBuildEvent>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\Debug/ETrade_Order_Sample.bsc</OutputFile>
+      <OutputFile>$(IntDir)ETrade_Order_Sample.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -179,7 +174,7 @@ if exist "$(SolutionDir)Login.ini" copy /Y "$(SolutionDir)Login.ini" "$(OutDir)"
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TypeLibraryName>.\Debug/ETrade_Order_Sample.tlb</TypeLibraryName>
+      <TypeLibraryName>$(IntDir)ETrade_Order_Sample.tlb</TypeLibraryName>
       <HeaderFileName>
       </HeaderFileName>
     </Midl>
@@ -190,10 +185,10 @@ if exist "$(SolutionDir)Login.ini" copy /Y "$(SolutionDir)Login.ini" "$(OutDir)"
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>.\Debug/ETrade_Order_Sample.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
-      <ObjectFileName>.\Debug/</ObjectFileName>
-      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>$(IntDir)ETrade_Order_Sample.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -207,7 +202,7 @@ if exist "$(SolutionDir)Login.ini" copy /Y "$(SolutionDir)Login.ini" "$(OutDir)"
     <Link>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\Debug/ETrade_Order_Sample.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(IntDir)ETrade_Order_Sample.pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
@@ -218,36 +213,26 @@ if exist "$(SolutionDir)Login.ini" copy /Y "$(SolutionDir)Login.ini" "$(OutDir)"
     <PostBuildEvent>
       <Message>필수 DLL 및 설정 파일을 출력 디렉토리로 복사 중...</Message>
       <Command>if not exist "$(OutDir)" mkdir "$(OutDir)"
-if exist "$(SolutionDir)Release\xingAPI.dll" copy /Y "$(SolutionDir)Release\xingAPI.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\xingAPI.ini" copy /Y "$(SolutionDir)Release\xingAPI.ini" "$(OutDir)"
-if exist "$(SolutionDir)Release\XA_Common.dll" copy /Y "$(SolutionDir)Release\XA_Common.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\XA_DataSet.dll" copy /Y "$(SolutionDir)Release\XA_DataSet.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\XA_Session.dll" copy /Y "$(SolutionDir)Release\XA_Session.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\XecureS.dll" copy /Y "$(SolutionDir)Release\XecureS.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\xingAceRDSender.dll" copy /Y "$(SolutionDir)Release\xingAceRDSender.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\inicore_v2.4.3.1.dll" copy /Y "$(SolutionDir)Release\inicore_v2.4.3.1.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\inicrypto_v5.2.0.1.dll" copy /Y "$(SolutionDir)Release\inicrypto_v5.2.0.1.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\inipki_v5.2.7.1.dll" copy /Y "$(SolutionDir)Release\inipki_v5.2.7.1.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\inisafenet_v7.2.dll" copy /Y "$(SolutionDir)Release\inisafenet_v7.2.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\libmysql.dll" copy /Y "$(SolutionDir)Release\libmysql.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\Login.ini" copy /Y "$(SolutionDir)Release\Login.ini" "$(OutDir)"
-if exist "$(SolutionDir)Release\Sys" xcopy /E /I /Y "$(SolutionDir)Release\Sys" "$(OutDir)Sys"
-if exist "$(SolutionDir)xingAPI.dll" copy /Y "$(SolutionDir)xingAPI.dll" "$(OutDir)"
-if exist "$(SolutionDir)xingAPI.ini" copy /Y "$(SolutionDir)xingAPI.ini" "$(OutDir)"
-if exist "$(SolutionDir)XA_Common.dll" copy /Y "$(SolutionDir)XA_Common.dll" "$(OutDir)"
-if exist "$(SolutionDir)XA_DataSet.dll" copy /Y "$(SolutionDir)XA_DataSet.dll" "$(OutDir)"
-if exist "$(SolutionDir)XA_Session.dll" copy /Y "$(SolutionDir)XA_Session.dll" "$(OutDir)"
-if exist "$(SolutionDir)XecureS.dll" copy /Y "$(SolutionDir)XecureS.dll" "$(OutDir)"
-if exist "$(SolutionDir)xingAceRDSender.dll" copy /Y "$(SolutionDir)xingAceRDSender.dll" "$(OutDir)"
-if exist "$(SolutionDir)inicore_v2.4.3.1.dll" copy /Y "$(SolutionDir)inicore_v2.4.3.1.dll" "$(OutDir)"
-if exist "$(SolutionDir)inicrypto_v5.2.0.1.dll" copy /Y "$(SolutionDir)inicrypto_v5.2.0.1.dll" "$(OutDir)"
-if exist "$(SolutionDir)inipki_v5.2.7.1.dll" copy /Y "$(SolutionDir)inipki_v5.2.7.1.dll" "$(OutDir)"
-if exist "$(SolutionDir)inisafenet_v7.2.dll" copy /Y "$(SolutionDir)inisafenet_v7.2.dll" "$(OutDir)"
-if exist "$(SolutionDir)Login.ini" copy /Y "$(SolutionDir)Login.ini" "$(OutDir)"</Command>
+if not "$(Configuration)"=="Release" (
+if exist "$(SolutionDir)MMMaster\Release\xingAPI.dll" copy /Y "$(SolutionDir)MMMaster\Release\xingAPI.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\xingAPI.ini" copy /Y "$(SolutionDir)MMMaster\Release\xingAPI.ini" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\XA_Common.dll" copy /Y "$(SolutionDir)MMMaster\Release\XA_Common.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\XA_DataSet.dll" copy /Y "$(SolutionDir)MMMaster\Release\XA_DataSet.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\XA_Session.dll" copy /Y "$(SolutionDir)MMMaster\Release\XA_Session.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\XecureS.dll" copy /Y "$(SolutionDir)MMMaster\Release\XecureS.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\xingAceRDSender.dll" copy /Y "$(SolutionDir)MMMaster\Release\xingAceRDSender.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\inicore_v2.4.3.1.dll" copy /Y "$(SolutionDir)MMMaster\Release\inicore_v2.4.3.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\inicrypto_v5.2.0.1.dll" copy /Y "$(SolutionDir)MMMaster\Release\inicrypto_v5.2.0.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\inipki_v5.2.7.1.dll" copy /Y "$(SolutionDir)MMMaster\Release\inipki_v5.2.7.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\inisafenet_v7.2.dll" copy /Y "$(SolutionDir)MMMaster\Release\inisafenet_v7.2.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\libmysql.dll" copy /Y "$(SolutionDir)MMMaster\Release\libmysql.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\Login.ini" copy /Y "$(SolutionDir)MMMaster\Release\Login.ini" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\Sys" if not exist "$(OutDir)Sys" mkdir "$(OutDir)Sys" &amp; xcopy /E /I /Y "$(SolutionDir)MMMaster\Release\Sys" "$(OutDir)Sys"
+)</Command>
     </PostBuildEvent>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\Debug/ETrade_Order_Sample.bsc</OutputFile>
+      <OutputFile>$(IntDir)ETrade_Order_Sample.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -256,7 +241,7 @@ if exist "$(SolutionDir)Login.ini" copy /Y "$(SolutionDir)Login.ini" "$(OutDir)"
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>.\Release/ETrade_Order_Sample.tlb</TypeLibraryName>
+      <TypeLibraryName>$(IntDir)ETrade_Order_Sample.tlb</TypeLibraryName>
       <HeaderFileName />
     </Midl>
     <ClCompile>
@@ -268,12 +253,12 @@ if exist "$(SolutionDir)Login.ini" copy /Y "$(SolutionDir)Login.ini" "$(OutDir)"
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <PrecompiledHeader>Create</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>.\Release/ETrade_Order_Sample.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)ETrade_Order_Sample.pch</PrecompiledHeaderOutputFile>
       <ExpandAttributedSource>false</ExpandAttributedSource>
       <AssemblerOutput />
-      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
-      <ObjectFileName>.\Release/</ObjectFileName>
-      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)</ProgramDataBaseFileName>
       <GenerateXMLDocumentationFiles>true</GenerateXMLDocumentationFiles>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -290,7 +275,7 @@ if exist "$(SolutionDir)Login.ini" copy /Y "$(SolutionDir)Login.ini" "$(OutDir)"
     </ResourceCompile>
     <Link>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <ProgramDatabaseFile>.\Release/ETrade_Order_Sample.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(IntDir)ETrade_Order_Sample.pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention />
@@ -301,36 +286,26 @@ if exist "$(SolutionDir)Login.ini" copy /Y "$(SolutionDir)Login.ini" "$(OutDir)"
     <PostBuildEvent>
       <Message>필수 DLL 및 설정 파일을 출력 디렉토리로 복사 중...</Message>
       <Command>if not exist "$(OutDir)" mkdir "$(OutDir)"
-if exist "$(SolutionDir)Release\xingAPI.dll" copy /Y "$(SolutionDir)Release\xingAPI.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\xingAPI.ini" copy /Y "$(SolutionDir)Release\xingAPI.ini" "$(OutDir)"
-if exist "$(SolutionDir)Release\XA_Common.dll" copy /Y "$(SolutionDir)Release\XA_Common.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\XA_DataSet.dll" copy /Y "$(SolutionDir)Release\XA_DataSet.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\XA_Session.dll" copy /Y "$(SolutionDir)Release\XA_Session.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\XecureS.dll" copy /Y "$(SolutionDir)Release\XecureS.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\xingAceRDSender.dll" copy /Y "$(SolutionDir)Release\xingAceRDSender.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\inicore_v2.4.3.1.dll" copy /Y "$(SolutionDir)Release\inicore_v2.4.3.1.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\inicrypto_v5.2.0.1.dll" copy /Y "$(SolutionDir)Release\inicrypto_v5.2.0.1.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\inipki_v5.2.7.1.dll" copy /Y "$(SolutionDir)Release\inipki_v5.2.7.1.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\inisafenet_v7.2.dll" copy /Y "$(SolutionDir)Release\inisafenet_v7.2.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\libmysql.dll" copy /Y "$(SolutionDir)Release\libmysql.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\Login.ini" copy /Y "$(SolutionDir)Release\Login.ini" "$(OutDir)"
-if exist "$(SolutionDir)Release\Sys" xcopy /E /I /Y "$(SolutionDir)Release\Sys" "$(OutDir)Sys"
-if exist "$(SolutionDir)xingAPI.dll" copy /Y "$(SolutionDir)xingAPI.dll" "$(OutDir)"
-if exist "$(SolutionDir)xingAPI.ini" copy /Y "$(SolutionDir)xingAPI.ini" "$(OutDir)"
-if exist "$(SolutionDir)XA_Common.dll" copy /Y "$(SolutionDir)XA_Common.dll" "$(OutDir)"
-if exist "$(SolutionDir)XA_DataSet.dll" copy /Y "$(SolutionDir)XA_DataSet.dll" "$(OutDir)"
-if exist "$(SolutionDir)XA_Session.dll" copy /Y "$(SolutionDir)XA_Session.dll" "$(OutDir)"
-if exist "$(SolutionDir)XecureS.dll" copy /Y "$(SolutionDir)XecureS.dll" "$(OutDir)"
-if exist "$(SolutionDir)xingAceRDSender.dll" copy /Y "$(SolutionDir)xingAceRDSender.dll" "$(OutDir)"
-if exist "$(SolutionDir)inicore_v2.4.3.1.dll" copy /Y "$(SolutionDir)inicore_v2.4.3.1.dll" "$(OutDir)"
-if exist "$(SolutionDir)inicrypto_v5.2.0.1.dll" copy /Y "$(SolutionDir)inicrypto_v5.2.0.1.dll" "$(OutDir)"
-if exist "$(SolutionDir)inipki_v5.2.7.1.dll" copy /Y "$(SolutionDir)inipki_v5.2.7.1.dll" "$(OutDir)"
-if exist "$(SolutionDir)inisafenet_v7.2.dll" copy /Y "$(SolutionDir)inisafenet_v7.2.dll" "$(OutDir)"
-if exist "$(SolutionDir)Login.ini" copy /Y "$(SolutionDir)Login.ini" "$(OutDir)"</Command>
+if not "$(Configuration)"=="Release" (
+if exist "$(SolutionDir)MMMaster\Release\xingAPI.dll" copy /Y "$(SolutionDir)MMMaster\Release\xingAPI.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\xingAPI.ini" copy /Y "$(SolutionDir)MMMaster\Release\xingAPI.ini" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\XA_Common.dll" copy /Y "$(SolutionDir)MMMaster\Release\XA_Common.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\XA_DataSet.dll" copy /Y "$(SolutionDir)MMMaster\Release\XA_DataSet.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\XA_Session.dll" copy /Y "$(SolutionDir)MMMaster\Release\XA_Session.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\XecureS.dll" copy /Y "$(SolutionDir)MMMaster\Release\XecureS.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\xingAceRDSender.dll" copy /Y "$(SolutionDir)MMMaster\Release\xingAceRDSender.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\inicore_v2.4.3.1.dll" copy /Y "$(SolutionDir)MMMaster\Release\inicore_v2.4.3.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\inicrypto_v5.2.0.1.dll" copy /Y "$(SolutionDir)MMMaster\Release\inicrypto_v5.2.0.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\inipki_v5.2.7.1.dll" copy /Y "$(SolutionDir)MMMaster\Release\inipki_v5.2.7.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\inisafenet_v7.2.dll" copy /Y "$(SolutionDir)MMMaster\Release\inisafenet_v7.2.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\libmysql.dll" copy /Y "$(SolutionDir)MMMaster\Release\libmysql.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\Login.ini" copy /Y "$(SolutionDir)MMMaster\Release\Login.ini" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\Sys" if not exist "$(OutDir)Sys" mkdir "$(OutDir)Sys" &amp; xcopy /E /I /Y "$(SolutionDir)MMMaster\Release\Sys" "$(OutDir)Sys"
+)</Command>
     </PostBuildEvent>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\Release/ETrade_Order_Sample.bsc</OutputFile>
+      <OutputFile>$(IntDir)ETrade_Order_Sample.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -338,7 +313,7 @@ if exist "$(SolutionDir)Login.ini" copy /Y "$(SolutionDir)Login.ini" "$(OutDir)"
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TypeLibraryName>.\Release/ETrade_Order_Sample.tlb</TypeLibraryName>
+      <TypeLibraryName>$(IntDir)ETrade_Order_Sample.tlb</TypeLibraryName>
       <HeaderFileName>
       </HeaderFileName>
     </Midl>
@@ -351,13 +326,13 @@ if exist "$(SolutionDir)Login.ini" copy /Y "$(SolutionDir)Login.ini" "$(OutDir)"
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <PrecompiledHeader>Create</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>.\Release/ETrade_Order_Sample.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)ETrade_Order_Sample.pch</PrecompiledHeaderOutputFile>
       <ExpandAttributedSource>false</ExpandAttributedSource>
       <AssemblerOutput>
       </AssemblerOutput>
-      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
-      <ObjectFileName>.\Release/</ObjectFileName>
-      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)</ProgramDataBaseFileName>
       <GenerateXMLDocumentationFiles>true</GenerateXMLDocumentationFiles>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -370,7 +345,7 @@ if exist "$(SolutionDir)Login.ini" copy /Y "$(SolutionDir)Login.ini" "$(OutDir)"
     </ResourceCompile>
     <Link>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <ProgramDatabaseFile>.\Release/ETrade_Order_Sample.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(IntDir)ETrade_Order_Sample.pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
@@ -381,36 +356,26 @@ if exist "$(SolutionDir)Login.ini" copy /Y "$(SolutionDir)Login.ini" "$(OutDir)"
     <PostBuildEvent>
       <Message>필수 DLL 및 설정 파일을 출력 디렉토리로 복사 중...</Message>
       <Command>if not exist "$(OutDir)" mkdir "$(OutDir)"
-if exist "$(SolutionDir)Release\xingAPI.dll" copy /Y "$(SolutionDir)Release\xingAPI.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\xingAPI.ini" copy /Y "$(SolutionDir)Release\xingAPI.ini" "$(OutDir)"
-if exist "$(SolutionDir)Release\XA_Common.dll" copy /Y "$(SolutionDir)Release\XA_Common.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\XA_DataSet.dll" copy /Y "$(SolutionDir)Release\XA_DataSet.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\XA_Session.dll" copy /Y "$(SolutionDir)Release\XA_Session.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\XecureS.dll" copy /Y "$(SolutionDir)Release\XecureS.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\xingAceRDSender.dll" copy /Y "$(SolutionDir)Release\xingAceRDSender.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\inicore_v2.4.3.1.dll" copy /Y "$(SolutionDir)Release\inicore_v2.4.3.1.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\inicrypto_v5.2.0.1.dll" copy /Y "$(SolutionDir)Release\inicrypto_v5.2.0.1.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\inipki_v5.2.7.1.dll" copy /Y "$(SolutionDir)Release\inipki_v5.2.7.1.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\inisafenet_v7.2.dll" copy /Y "$(SolutionDir)Release\inisafenet_v7.2.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\libmysql.dll" copy /Y "$(SolutionDir)Release\libmysql.dll" "$(OutDir)"
-if exist "$(SolutionDir)Release\Login.ini" copy /Y "$(SolutionDir)Release\Login.ini" "$(OutDir)"
-if exist "$(SolutionDir)Release\Sys" xcopy /E /I /Y "$(SolutionDir)Release\Sys" "$(OutDir)Sys"
-if exist "$(SolutionDir)xingAPI.dll" copy /Y "$(SolutionDir)xingAPI.dll" "$(OutDir)"
-if exist "$(SolutionDir)xingAPI.ini" copy /Y "$(SolutionDir)xingAPI.ini" "$(OutDir)"
-if exist "$(SolutionDir)XA_Common.dll" copy /Y "$(SolutionDir)XA_Common.dll" "$(OutDir)"
-if exist "$(SolutionDir)XA_DataSet.dll" copy /Y "$(SolutionDir)XA_DataSet.dll" "$(OutDir)"
-if exist "$(SolutionDir)XA_Session.dll" copy /Y "$(SolutionDir)XA_Session.dll" "$(OutDir)"
-if exist "$(SolutionDir)XecureS.dll" copy /Y "$(SolutionDir)XecureS.dll" "$(OutDir)"
-if exist "$(SolutionDir)xingAceRDSender.dll" copy /Y "$(SolutionDir)xingAceRDSender.dll" "$(OutDir)"
-if exist "$(SolutionDir)inicore_v2.4.3.1.dll" copy /Y "$(SolutionDir)inicore_v2.4.3.1.dll" "$(OutDir)"
-if exist "$(SolutionDir)inicrypto_v5.2.0.1.dll" copy /Y "$(SolutionDir)inicrypto_v5.2.0.1.dll" "$(OutDir)"
-if exist "$(SolutionDir)inipki_v5.2.7.1.dll" copy /Y "$(SolutionDir)inipki_v5.2.7.1.dll" "$(OutDir)"
-if exist "$(SolutionDir)inisafenet_v7.2.dll" copy /Y "$(SolutionDir)inisafenet_v7.2.dll" "$(OutDir)"
-if exist "$(SolutionDir)Login.ini" copy /Y "$(SolutionDir)Login.ini" "$(OutDir)"</Command>
+if not "$(Configuration)"=="Release" (
+if exist "$(SolutionDir)MMMaster\Release\xingAPI.dll" copy /Y "$(SolutionDir)MMMaster\Release\xingAPI.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\xingAPI.ini" copy /Y "$(SolutionDir)MMMaster\Release\xingAPI.ini" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\XA_Common.dll" copy /Y "$(SolutionDir)MMMaster\Release\XA_Common.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\XA_DataSet.dll" copy /Y "$(SolutionDir)MMMaster\Release\XA_DataSet.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\XA_Session.dll" copy /Y "$(SolutionDir)MMMaster\Release\XA_Session.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\XecureS.dll" copy /Y "$(SolutionDir)MMMaster\Release\XecureS.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\xingAceRDSender.dll" copy /Y "$(SolutionDir)MMMaster\Release\xingAceRDSender.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\inicore_v2.4.3.1.dll" copy /Y "$(SolutionDir)MMMaster\Release\inicore_v2.4.3.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\inicrypto_v5.2.0.1.dll" copy /Y "$(SolutionDir)MMMaster\Release\inicrypto_v5.2.0.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\inipki_v5.2.7.1.dll" copy /Y "$(SolutionDir)MMMaster\Release\inipki_v5.2.7.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\inisafenet_v7.2.dll" copy /Y "$(SolutionDir)MMMaster\Release\inisafenet_v7.2.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\libmysql.dll" copy /Y "$(SolutionDir)MMMaster\Release\libmysql.dll" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\Login.ini" copy /Y "$(SolutionDir)MMMaster\Release\Login.ini" "$(OutDir)"
+if exist "$(SolutionDir)MMMaster\Release\Sys" if not exist "$(OutDir)Sys" mkdir "$(OutDir)Sys" &amp; xcopy /E /I /Y "$(SolutionDir)MMMaster\Release\Sys" "$(OutDir)Sys"
+)</Command>
     </PostBuildEvent>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\Release/ETrade_Order_Sample.bsc</OutputFile>
+      <OutputFile>$(IntDir)ETrade_Order_Sample.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -434,16 +399,16 @@ if exist "$(SolutionDir)Login.ini" copy /Y "$(SolutionDir)Login.ini" "$(OutDir)"
     <ClCompile Include="ETrade_Order_SampleDlg.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release/ETrade_Order_Sample.pch</PrecompiledHeaderOutputFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\Release/ETrade_Order_Sample.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)ETrade_Order_Sample.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)ETrade_Order_Sample.pch</PrecompiledHeaderOutputFile>
       <ExpandAttributedSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExpandAttributedSource>
       <ExpandAttributedSource Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExpandAttributedSource>
-      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release/</AssemblerListingLocation>
-      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\Release/</AssemblerListingLocation>
-      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release/</ObjectFileName>
-      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\Release/</ObjectFileName>
-      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release/</ProgramDataBaseFileName>
-      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\Release/</ProgramDataBaseFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)</AssemblerListingLocation>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)</ProgramDataBaseFileName>
     </ClCompile>
     <ClCompile Include="GetList.cpp" />
     <ClCompile Include="ListofLog.cpp" />
