@@ -2,6 +2,10 @@
 
 #include <afx.h>
 
+// MasterKey.h 포함 (빌드 전처리 스크립트에서 생성)
+// masterkey.ini 파일이 있으면 그 키를 사용하고, 없으면 기본값 사용
+#include "MasterKey.h"
+
 //================================================================================================
 // ConfigManager: 설정 파일 관리 클래스
 // 
@@ -13,7 +17,24 @@
 // 보안:
 // - 계좌 정보는 AES 암호화로 저장
 // - 설정 파일이 없거나 손상된 경우 기본값 사용 불가 (보안 제어)
+//
+// 빌드 시점 마스터 키 설정:
+// - Visual Studio 프로젝트 속성에서 Preprocessor Definitions에 추가:
+//   BUILD_ENCRYPTION_KEY="YourMasterKey123!"
+// - 또는 컴파일러 옵션: /D "BUILD_ENCRYPTION_KEY=\"YourMasterKey123!\""
 //================================================================================================
+
+// 빌드 시점 마스터 키 (masterkey.ini에서 자동 생성)
+// Pre-Build Event에서 generate_masterkey_header.ps1가 masterkey.ini를 읽어 MasterKey.h 생성
+// MasterKey.h는 상단에서 이미 포함됨
+
+#ifdef BUILD_ENCRYPTION_KEY
+	#define MASTER_ENCRYPTION_KEY _T(BUILD_ENCRYPTION_KEY)
+#else
+	// 개발용 기본 키 (빌드 시점 키가 없을 때만 사용)
+	// masterkey.ini 파일이 없거나 Pre-Build Event가 실행되지 않은 경우
+	#define MASTER_ENCRYPTION_KEY _T("MyMasterKey123!")
+#endif
 class CConfigManager
 {
 public:
@@ -22,6 +43,9 @@ public:
 
 	// 설정 파일 경로
 	static CString GetConfigPath();
+	
+	// 마스터 키 파일 경로
+	static CString GetMasterKeyPath();
 
 	// 계좌 정보 읽기 (암호화된 정보 복호화)
 	// 반환값: 성공=1, 실패=0
@@ -48,12 +72,18 @@ public:
 		CString strVerifyPW, CString strEncryptionKey);
 
 private:
-	// 암호화 키 (하드코딩 또는 외부에서 주입)
+	// 암호화 키 (config.ini에서 읽거나 기본값 사용)
 	CString m_strEncryptionKey;
+	
+	// 암호화 키 로드 (config.ini에서 읽기)
+	void LoadEncryptionKey();
 
 	// 간단한 XOR 암호화 (향후 AES로 개선 가능)
 	CString EncryptString(CString strPlainText, CString strKey);
 	CString DecryptString(CString strCipherText, CString strKey);
+	
+	// 파일 해시 계산 (변조 감지용)
+	CString CalculateFileHash();
 
 	// INI 파일 읽기/쓰기 헬퍼
 	CString ReadIniString(LPCTSTR lpszSection, LPCTSTR lpszKey, LPCTSTR lpszDefault = _T(""));

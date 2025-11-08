@@ -74,19 +74,23 @@
     <_ProjectFileVersion>17.0.33205.214</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>.\Debug\</OutDir>
-    <IntDir>.\Debug\</IntDir>
+    <OutDir>$(SolutionDir)MMMaster\Debug\</OutDir>
+    <IntDir>$(SolutionDir)MMMaster\Debug\</IntDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)MMMaster\x64\Debug\</OutDir>
+    <IntDir>$(SolutionDir)MMMaster\x64\Debug\</IntDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>.\Release\</OutDir>
-    <IntDir>.\Release\</IntDir>
+    <OutDir>$(SolutionDir)MMMaster\Release\</OutDir>
+    <IntDir>$(SolutionDir)MMMaster\Release\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)MMMaster\x64\Release\</OutDir>
+    <IntDir>$(SolutionDir)MMMaster\x64\Release\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -114,7 +118,12 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <AdditionalIncludeDirectories>D:\swtool\MySQL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
+    <PreBuildEvent>
+      <Command>powershell.exe -ExecutionPolicy Bypass -File "$(ProjectDir)generate_masterkey_header.ps1" -ProjectDir "$(ProjectDir)"</Command>
+      <Message>MasterKey.h 생성 중 (masterkey.ini에서 읽기)...</Message>
+    </PreBuildEvent>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0412</Culture>
@@ -130,6 +139,36 @@
       <AdditionalDependencies>libmysql.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>D:\swtool\MySQL\lib\opt;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <PostBuildEvent>
+      <Message>필수 DLL 및 설정 파일을 출력 디렉토리로 복사 중...</Message>
+      <Command>if not exist "$(OutDir)" mkdir "$(OutDir)"
+if exist "$(SolutionDir)Release\xingAPI.dll" copy /Y "$(SolutionDir)Release\xingAPI.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\xingAPI.ini" copy /Y "$(SolutionDir)Release\xingAPI.ini" "$(OutDir)"
+if exist "$(SolutionDir)Release\XA_Common.dll" copy /Y "$(SolutionDir)Release\XA_Common.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\XA_DataSet.dll" copy /Y "$(SolutionDir)Release\XA_DataSet.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\XA_Session.dll" copy /Y "$(SolutionDir)Release\XA_Session.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\XecureS.dll" copy /Y "$(SolutionDir)Release\XecureS.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\xingAceRDSender.dll" copy /Y "$(SolutionDir)Release\xingAceRDSender.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\inicore_v2.4.3.1.dll" copy /Y "$(SolutionDir)Release\inicore_v2.4.3.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\inicrypto_v5.2.0.1.dll" copy /Y "$(SolutionDir)Release\inicrypto_v5.2.0.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\inipki_v5.2.7.1.dll" copy /Y "$(SolutionDir)Release\inipki_v5.2.7.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\inisafenet_v7.2.dll" copy /Y "$(SolutionDir)Release\inisafenet_v7.2.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\libmysql.dll" copy /Y "$(SolutionDir)Release\libmysql.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\Login.ini" copy /Y "$(SolutionDir)Release\Login.ini" "$(OutDir)"
+if exist "$(SolutionDir)Release\Sys" xcopy /E /I /Y "$(SolutionDir)Release\Sys" "$(OutDir)Sys"
+if exist "$(SolutionDir)xingAPI.dll" copy /Y "$(SolutionDir)xingAPI.dll" "$(OutDir)"
+if exist "$(SolutionDir)xingAPI.ini" copy /Y "$(SolutionDir)xingAPI.ini" "$(OutDir)"
+if exist "$(SolutionDir)XA_Common.dll" copy /Y "$(SolutionDir)XA_Common.dll" "$(OutDir)"
+if exist "$(SolutionDir)XA_DataSet.dll" copy /Y "$(SolutionDir)XA_DataSet.dll" "$(OutDir)"
+if exist "$(SolutionDir)XA_Session.dll" copy /Y "$(SolutionDir)XA_Session.dll" "$(OutDir)"
+if exist "$(SolutionDir)XecureS.dll" copy /Y "$(SolutionDir)XecureS.dll" "$(OutDir)"
+if exist "$(SolutionDir)xingAceRDSender.dll" copy /Y "$(SolutionDir)xingAceRDSender.dll" "$(OutDir)"
+if exist "$(SolutionDir)inicore_v2.4.3.1.dll" copy /Y "$(SolutionDir)inicore_v2.4.3.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)inicrypto_v5.2.0.1.dll" copy /Y "$(SolutionDir)inicrypto_v5.2.0.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)inipki_v5.2.7.1.dll" copy /Y "$(SolutionDir)inipki_v5.2.7.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)inisafenet_v7.2.dll" copy /Y "$(SolutionDir)inisafenet_v7.2.dll" "$(OutDir)"
+if exist "$(SolutionDir)Login.ini" copy /Y "$(SolutionDir)Login.ini" "$(OutDir)"</Command>
+    </PostBuildEvent>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <OutputFile>.\Debug/ETrade_Order_Sample.bsc</OutputFile>
@@ -159,6 +198,7 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <AdditionalIncludeDirectories>D:\swtool\MySQL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -175,6 +215,36 @@
       <AdditionalLibraryDirectories>D:\swtool\MySQL\lib\opt;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>libmysql.lib</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Message>필수 DLL 및 설정 파일을 출력 디렉토리로 복사 중...</Message>
+      <Command>if not exist "$(OutDir)" mkdir "$(OutDir)"
+if exist "$(SolutionDir)Release\xingAPI.dll" copy /Y "$(SolutionDir)Release\xingAPI.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\xingAPI.ini" copy /Y "$(SolutionDir)Release\xingAPI.ini" "$(OutDir)"
+if exist "$(SolutionDir)Release\XA_Common.dll" copy /Y "$(SolutionDir)Release\XA_Common.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\XA_DataSet.dll" copy /Y "$(SolutionDir)Release\XA_DataSet.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\XA_Session.dll" copy /Y "$(SolutionDir)Release\XA_Session.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\XecureS.dll" copy /Y "$(SolutionDir)Release\XecureS.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\xingAceRDSender.dll" copy /Y "$(SolutionDir)Release\xingAceRDSender.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\inicore_v2.4.3.1.dll" copy /Y "$(SolutionDir)Release\inicore_v2.4.3.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\inicrypto_v5.2.0.1.dll" copy /Y "$(SolutionDir)Release\inicrypto_v5.2.0.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\inipki_v5.2.7.1.dll" copy /Y "$(SolutionDir)Release\inipki_v5.2.7.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\inisafenet_v7.2.dll" copy /Y "$(SolutionDir)Release\inisafenet_v7.2.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\libmysql.dll" copy /Y "$(SolutionDir)Release\libmysql.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\Login.ini" copy /Y "$(SolutionDir)Release\Login.ini" "$(OutDir)"
+if exist "$(SolutionDir)Release\Sys" xcopy /E /I /Y "$(SolutionDir)Release\Sys" "$(OutDir)Sys"
+if exist "$(SolutionDir)xingAPI.dll" copy /Y "$(SolutionDir)xingAPI.dll" "$(OutDir)"
+if exist "$(SolutionDir)xingAPI.ini" copy /Y "$(SolutionDir)xingAPI.ini" "$(OutDir)"
+if exist "$(SolutionDir)XA_Common.dll" copy /Y "$(SolutionDir)XA_Common.dll" "$(OutDir)"
+if exist "$(SolutionDir)XA_DataSet.dll" copy /Y "$(SolutionDir)XA_DataSet.dll" "$(OutDir)"
+if exist "$(SolutionDir)XA_Session.dll" copy /Y "$(SolutionDir)XA_Session.dll" "$(OutDir)"
+if exist "$(SolutionDir)XecureS.dll" copy /Y "$(SolutionDir)XecureS.dll" "$(OutDir)"
+if exist "$(SolutionDir)xingAceRDSender.dll" copy /Y "$(SolutionDir)xingAceRDSender.dll" "$(OutDir)"
+if exist "$(SolutionDir)inicore_v2.4.3.1.dll" copy /Y "$(SolutionDir)inicore_v2.4.3.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)inicrypto_v5.2.0.1.dll" copy /Y "$(SolutionDir)inicrypto_v5.2.0.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)inipki_v5.2.7.1.dll" copy /Y "$(SolutionDir)inipki_v5.2.7.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)inisafenet_v7.2.dll" copy /Y "$(SolutionDir)inisafenet_v7.2.dll" "$(OutDir)"
+if exist "$(SolutionDir)Login.ini" copy /Y "$(SolutionDir)Login.ini" "$(OutDir)"</Command>
+    </PostBuildEvent>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <OutputFile>.\Debug/ETrade_Order_Sample.bsc</OutputFile>
@@ -208,7 +278,12 @@
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalIncludeDirectories>D:\swtool\MySQL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
+    <PreBuildEvent>
+      <Command>powershell.exe -ExecutionPolicy Bypass -File "$(ProjectDir)generate_masterkey_header.ps1" -ProjectDir "$(ProjectDir)"</Command>
+      <Message>MasterKey.h 생성 중 (masterkey.ini에서 읽기)...</Message>
+    </PreBuildEvent>
     <ResourceCompile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0412</Culture>
@@ -223,6 +298,36 @@
       <AdditionalDependencies>libmysql.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>D:\swtool\MySQL\lib\opt;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <PostBuildEvent>
+      <Message>필수 DLL 및 설정 파일을 출력 디렉토리로 복사 중...</Message>
+      <Command>if not exist "$(OutDir)" mkdir "$(OutDir)"
+if exist "$(SolutionDir)Release\xingAPI.dll" copy /Y "$(SolutionDir)Release\xingAPI.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\xingAPI.ini" copy /Y "$(SolutionDir)Release\xingAPI.ini" "$(OutDir)"
+if exist "$(SolutionDir)Release\XA_Common.dll" copy /Y "$(SolutionDir)Release\XA_Common.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\XA_DataSet.dll" copy /Y "$(SolutionDir)Release\XA_DataSet.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\XA_Session.dll" copy /Y "$(SolutionDir)Release\XA_Session.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\XecureS.dll" copy /Y "$(SolutionDir)Release\XecureS.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\xingAceRDSender.dll" copy /Y "$(SolutionDir)Release\xingAceRDSender.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\inicore_v2.4.3.1.dll" copy /Y "$(SolutionDir)Release\inicore_v2.4.3.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\inicrypto_v5.2.0.1.dll" copy /Y "$(SolutionDir)Release\inicrypto_v5.2.0.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\inipki_v5.2.7.1.dll" copy /Y "$(SolutionDir)Release\inipki_v5.2.7.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\inisafenet_v7.2.dll" copy /Y "$(SolutionDir)Release\inisafenet_v7.2.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\libmysql.dll" copy /Y "$(SolutionDir)Release\libmysql.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\Login.ini" copy /Y "$(SolutionDir)Release\Login.ini" "$(OutDir)"
+if exist "$(SolutionDir)Release\Sys" xcopy /E /I /Y "$(SolutionDir)Release\Sys" "$(OutDir)Sys"
+if exist "$(SolutionDir)xingAPI.dll" copy /Y "$(SolutionDir)xingAPI.dll" "$(OutDir)"
+if exist "$(SolutionDir)xingAPI.ini" copy /Y "$(SolutionDir)xingAPI.ini" "$(OutDir)"
+if exist "$(SolutionDir)XA_Common.dll" copy /Y "$(SolutionDir)XA_Common.dll" "$(OutDir)"
+if exist "$(SolutionDir)XA_DataSet.dll" copy /Y "$(SolutionDir)XA_DataSet.dll" "$(OutDir)"
+if exist "$(SolutionDir)XA_Session.dll" copy /Y "$(SolutionDir)XA_Session.dll" "$(OutDir)"
+if exist "$(SolutionDir)XecureS.dll" copy /Y "$(SolutionDir)XecureS.dll" "$(OutDir)"
+if exist "$(SolutionDir)xingAceRDSender.dll" copy /Y "$(SolutionDir)xingAceRDSender.dll" "$(OutDir)"
+if exist "$(SolutionDir)inicore_v2.4.3.1.dll" copy /Y "$(SolutionDir)inicore_v2.4.3.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)inicrypto_v5.2.0.1.dll" copy /Y "$(SolutionDir)inicrypto_v5.2.0.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)inipki_v5.2.7.1.dll" copy /Y "$(SolutionDir)inipki_v5.2.7.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)inisafenet_v7.2.dll" copy /Y "$(SolutionDir)inisafenet_v7.2.dll" "$(OutDir)"
+if exist "$(SolutionDir)Login.ini" copy /Y "$(SolutionDir)Login.ini" "$(OutDir)"</Command>
+    </PostBuildEvent>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <OutputFile>.\Release/ETrade_Order_Sample.bsc</OutputFile>
@@ -257,6 +362,7 @@
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalIncludeDirectories>D:\swtool\MySQL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -272,12 +378,48 @@
       <AdditionalLibraryDirectories>D:\swtool\MySQL\lib\opt;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>libmysql.lib</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Message>필수 DLL 및 설정 파일을 출력 디렉토리로 복사 중...</Message>
+      <Command>if not exist "$(OutDir)" mkdir "$(OutDir)"
+if exist "$(SolutionDir)Release\xingAPI.dll" copy /Y "$(SolutionDir)Release\xingAPI.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\xingAPI.ini" copy /Y "$(SolutionDir)Release\xingAPI.ini" "$(OutDir)"
+if exist "$(SolutionDir)Release\XA_Common.dll" copy /Y "$(SolutionDir)Release\XA_Common.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\XA_DataSet.dll" copy /Y "$(SolutionDir)Release\XA_DataSet.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\XA_Session.dll" copy /Y "$(SolutionDir)Release\XA_Session.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\XecureS.dll" copy /Y "$(SolutionDir)Release\XecureS.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\xingAceRDSender.dll" copy /Y "$(SolutionDir)Release\xingAceRDSender.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\inicore_v2.4.3.1.dll" copy /Y "$(SolutionDir)Release\inicore_v2.4.3.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\inicrypto_v5.2.0.1.dll" copy /Y "$(SolutionDir)Release\inicrypto_v5.2.0.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\inipki_v5.2.7.1.dll" copy /Y "$(SolutionDir)Release\inipki_v5.2.7.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\inisafenet_v7.2.dll" copy /Y "$(SolutionDir)Release\inisafenet_v7.2.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\libmysql.dll" copy /Y "$(SolutionDir)Release\libmysql.dll" "$(OutDir)"
+if exist "$(SolutionDir)Release\Login.ini" copy /Y "$(SolutionDir)Release\Login.ini" "$(OutDir)"
+if exist "$(SolutionDir)Release\Sys" xcopy /E /I /Y "$(SolutionDir)Release\Sys" "$(OutDir)Sys"
+if exist "$(SolutionDir)xingAPI.dll" copy /Y "$(SolutionDir)xingAPI.dll" "$(OutDir)"
+if exist "$(SolutionDir)xingAPI.ini" copy /Y "$(SolutionDir)xingAPI.ini" "$(OutDir)"
+if exist "$(SolutionDir)XA_Common.dll" copy /Y "$(SolutionDir)XA_Common.dll" "$(OutDir)"
+if exist "$(SolutionDir)XA_DataSet.dll" copy /Y "$(SolutionDir)XA_DataSet.dll" "$(OutDir)"
+if exist "$(SolutionDir)XA_Session.dll" copy /Y "$(SolutionDir)XA_Session.dll" "$(OutDir)"
+if exist "$(SolutionDir)XecureS.dll" copy /Y "$(SolutionDir)XecureS.dll" "$(OutDir)"
+if exist "$(SolutionDir)xingAceRDSender.dll" copy /Y "$(SolutionDir)xingAceRDSender.dll" "$(OutDir)"
+if exist "$(SolutionDir)inicore_v2.4.3.1.dll" copy /Y "$(SolutionDir)inicore_v2.4.3.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)inicrypto_v5.2.0.1.dll" copy /Y "$(SolutionDir)inicrypto_v5.2.0.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)inipki_v5.2.7.1.dll" copy /Y "$(SolutionDir)inipki_v5.2.7.1.dll" "$(OutDir)"
+if exist "$(SolutionDir)inisafenet_v7.2.dll" copy /Y "$(SolutionDir)inisafenet_v7.2.dll" "$(OutDir)"
+if exist "$(SolutionDir)Login.ini" copy /Y "$(SolutionDir)Login.ini" "$(OutDir)"</Command>
+    </PostBuildEvent>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <OutputFile>.\Release/ETrade_Order_Sample.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ConfigManager.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="CSPAQ03700.cpp" />
     <ClCompile Include="CSPAT00700.cpp" />
     <ClCompile Include="CSPAT00800.cpp" />
@@ -323,6 +465,7 @@
     <ClCompile Include="XLEzAutomation.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ConfigManager.h" />
     <ClInclude Include="CSPAT00700.h" />
     <ClInclude Include="CSPAT00800.h" />
     <ClInclude Include="CSPBQ00200.h" />

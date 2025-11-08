@@ -54,7 +54,7 @@ public:
 	void AddArgumentCommon(LPOLESTR lpszArgName, WORD wFlags, VARTYPE vt);
 	BOOL InitOLE();
 	CXLAutomation();
-	CXLAutomation::CXLAutomation(BOOL bVisible);
+	CXLAutomation(BOOL bVisible);
 	virtual ~CXLAutomation();
 	BOOL SetExcelVisible(BOOL bVisible);
 

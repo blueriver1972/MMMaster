@@ -4,6 +4,7 @@
 #pragma once
 
 #define VC_EXTRALEAN
+#define _AFXDLL  // MFC Dynamic 라이브러리 사용
 #include <afx.h>
 #include <afxwin.h>
 #include <iostream>

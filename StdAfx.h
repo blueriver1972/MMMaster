@@ -12,6 +12,11 @@
 
 #define VC_EXTRALEAN		// Exclude rarely-used stuff from Windows headers
 
+// Visual Studio 2022: sprintf, wsprintf 등의 보안 경고 비활성화
+#ifndef _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
+#endif
+
 // Visual Studio 2022 호환성을 위한 헤더
 // afx.h가 new.h를 찾으려 하므로 _INC_NEW 매크로를 먼저 정의
 #define _INC_NEW            // Visual Studio 2022: new.h 대신 <new> 사용
